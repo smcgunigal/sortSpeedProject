@@ -150,9 +150,6 @@ int main(int argc, const char * argv[])
 // every time
 void randomString(char** array, int index, int seed) {
     int length = 0;
-    //char* output = new char[11];
-    //for (int i = 0; i < 11; i++)
-    //    output[i] = '\0';
     
     srand(seed*time(NULL));
     
@@ -168,7 +165,6 @@ void randomString(char** array, int index, int seed) {
         else
             array[index][i] = value + 61;
     }
-    //return output;
 }
 
 // Function for bubble sort, even though it wasn't used
@@ -207,7 +203,6 @@ float radixSort(char** array, int numElements) {
                         // I put this here to debug in case I ran out of memory or there was an overflow
                         value = 0;
                         (array[j])[i] = '\0';
-                        //cout << "ERROR" << endl;
                     } else
                     value -= 47;
                 } else if (value >=65 && value <= 90)
